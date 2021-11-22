@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pokémon Landing Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
+
+<div id="page-wrapper">
+  <header id="header">
+    <div class="logo">
+      <img
+           id="header-img"
+           src="https://lh3.googleusercontent.com/3TSaKxXGo2wT0lu0AyNUBnkk6wkCC2AzOhJyy3JXIPm-AmZ1k9DSAroWeBUyePswCZSs5lVp3mPF7HzUpY9VPlyOV5eddITONINr3WSqLNLm=e365-w600"
+           alt="Pokemon Go"
+           />
+    </div>
+
+  <nav id="nav-bar">
+    <ul>
+      <li><a class="nav-link" href="#play">Play where you are</a></li>
+      <li><a class="nav-link" href="#catch">Catch</a></li>
+      <li><a class="nav-link" href="#bond">Bond</a></li>
+      <li><a class="nav-link" href="#battle">Battles</a></li>
+    </ul>
+  </nav>
+  </header>  
+  <div class="container"></div>
+  
+  <section id="play">
+    <h2>Welcome, Trainers!</h2>
+<iframe
+        id="video"
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/C461fBV-J7c" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        ></iframe>
+    
+  </section>
+  
+  <section id="hero">
+    <h3>Create your Pokémon Trainer Club Account</h3>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input
+             name="email"
+             id="email"
+             type="email"
+             placeholder="Enter your email address"
+             required
+             />
+      <input id="submit" type="submit" value="Get started" class="btn"/>
+    </form>
+  </section>
+  
+  <div class="container">
+    <section id="features">
+      <div class="grid">
+        <div class="icon"><i class="fas fa-walking"></i></div>
+          <div class="desc">
+            <h2>Catch Pokémon</h2>
+            <p>Catching Pokémon is one way to collect them! You can also collect them by hatching Eggs and trading with other Trainers.
+            </p>
+          </div>
+        </div>
+      
+      <div class="grid">
+        <div class="icon"><i class="fas fa-gift"></i></div>
+        <div class="desc">
+          <h2>Items for Your Adventure</h2>
+          <p>Spin Photo Discs at PokéStops and Gyms to receive items that will help you on your Pokémon GO journey, including Poké Balls, Berries, Evolution items, and more.
+          </p>
+        </div>
+      </div>
+      
+      <div class="grid">
+        <div class="icon"><i class="fas fa-rocket"></i></div>
+        <div class="desc">
+          <h2>Team GO Rocket</h2>
+          <p>
+            Team GO Rocket has invaded the world of Pokémon GO! Whether you’re working on Special Research or just trying to rescue Shadow Pokémon, you can challenge Team GO Rocket and foil their plans.
+
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  <section id="pricing">
+    <div class="product" id="catch">
+      <div class="level">Catch</div>
+      <h2>Catch 'Em all!</h2>
+      <ol>
+        <li>Activate Incense to attract Pokémon</li>
+        <li>Open the Mystery Box to encounter Meltan</li>
+        <li>Receive bonus Field Research task once per day</li>
+      </ol>
+      <button class="btn">Select</button>
+    </div>
+    <div class="product" id="bond">
+      <div class="level">Bond</div>
+      <h2>Bonus</h2>
+      <ol>
+        <li>Make your friends smile with Gift stickers</li>
+        <li>Send and receive more Gifts!</li>
+        <li>Enjoy more ways to explore, grow, and bond with your buddy!</li>
+      </ol>
+      <button class="btn">Select</button>
+    </div>
+
+     <div class="product" id="battle">
+      <div class="level">Battle</div>
+      <h2>Battles!</h2>
+      <ol>
+        <li>Raid remotely</li>
+        <li>Climb the ranks of the GO Battle League</li>
+        <li>Battle with your friends</li>
+      </ol>
+      <button class="btn">Select</button>
+    </div>
+  </section>
+  
+  <footer>
+    <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>     
+    </ul>
+          <span>Copyright 2021, Niantic</span>
+  </footer>
+  
+  </div>
+  
+</div>
+<!-- partial -->
+  
+</body>
+</html>
