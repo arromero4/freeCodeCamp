@@ -57,7 +57,7 @@ function uniteUnique(arr) {
         let allArr = Array.from(arguments)
         //.reduce((arr1,arr2) => arr1.concat(arr2))
 
-        console.log(allArr)
+        //console.log(allArr)
 
         allArr.map(element => {
             if(!unionArr.includes(element)){
@@ -69,3 +69,20 @@ function uniteUnique(arr) {
       
       let result3 = uniteUnique3([1, 3, 2], [5, 2, 1, 4], [2, 1]);
       //console.log(result3)
+
+    const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
+    //console.log([...new Set(numbers)])
+
+// [2, 3, 4, 5, 6, 7, 32]
+
+
+//Option 3
+function uniteUnique4(...arr) {
+    let newArr = [].concat(...arr)
+    //console.log(newArr)
+    return newArr = [...new Set(newArr)]
+
+  }
+  
+  let result4 = uniteUnique4([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+  console.log(result4)
