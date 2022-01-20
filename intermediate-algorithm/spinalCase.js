@@ -21,8 +21,7 @@ function spinalCase(str) {
   console.log(spinalCase('AllThe-small Things'));
 
 
-  const text = "Mr Blue has a blue house and a blue car"
-
+const text = "Mr Blue has a blue house and a blue car"
 console.log(text.replace("blue", "red"));
 let result = text.replace(/blue/gi, "red");
 console.log(result)

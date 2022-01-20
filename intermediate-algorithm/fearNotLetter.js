@@ -33,19 +33,24 @@ fearNotLetter("abce")
       //code = str.charCodeAt(1) = b = 98;
       //code = str.charCodeAt(2) = c = 99;
       //code = str.charCodeAt(3) = e = 101;
-
-      console.log(str.charCodeAt(0)+i)
+      console.log("code: " + code)
+      console.log("iteration: " + i)
 
         
       /* if code of current character is not equal to first character + no of iteration
           hence character has been escaped */
 
-    //str.charCodeAt(0) + 0 = str.charCodeAt(0) = a = 97
-    //str.charCodeAt(0) + 1 = str.charCodeAt(1) = b = 98
-    //str.charCodeAt(0) + 2 = str.charCodeAt(2) = c = 99
-    //str.charCodeAt(0) + 3 = str.charCodeAt(3) = d = 100
+
+        //It is checked if code of current character is the expected one 
+        //(no characters are skipped) by using the logic - 
+        //code of current character = code of first character + number of iterations.
+        //str.charCodeAt(0) + 0 = str.charCodeAt(0) = a = 97
+        //str.charCodeAt(0) + 1 = str.charCodeAt(1) = b = 98
+        //str.charCodeAt(0) + 2 = str.charCodeAt(2) = c = 99
+        //str.charCodeAt(0) + 3 = str.charCodeAt(3) = d = 100
     
-      if (code !== str.charCodeAt(0) + i) {
+      if (code !== str.charCodeAt(0) + i) { 
+
 
         /* if current character has escaped one character find previous char and return */
         return String.fromCharCode(code - 1);
