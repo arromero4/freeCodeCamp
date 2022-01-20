@@ -49,4 +49,23 @@ function uniteUnique(arr) {
   }
   
   let result2 = uniteUnique2([1, 3, 2], [5, 2, 1, 4], [2, 1]);
-  console.log(result2)
+  //console.log(result2)
+
+    //Option 2
+    function uniteUnique3(arr) {
+        let unionArr = [];
+        let allArr = Array.from(arguments)
+        //.reduce((arr1,arr2) => arr1.concat(arr2))
+
+        console.log(allArr)
+
+        allArr.map(element => {
+            if(!unionArr.includes(element)){
+                unionArr.push(element)
+            }
+        });
+        return unionArr
+      }
+      
+      let result3 = uniteUnique3([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+      //console.log(result3)
