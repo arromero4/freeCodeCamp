@@ -51,7 +51,7 @@ function uniteUnique(arr) {
   let result2 = uniteUnique2([1, 3, 2], [5, 2, 1, 4], [2, 1]);
   //console.log(result2)
 
-    //Option 2
+    //Option 3
     function uniteUnique3(arr) {
         let unionArr = [];
         let allArr = Array.from(arguments)
