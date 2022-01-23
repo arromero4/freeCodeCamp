@@ -70,5 +70,5 @@ function sumPrimes(num) {
     return sum;
   }
   
-//console.log(sumPrimes(10));
+console.log(sumPrimes(10));
 console.log(isPrime(8))
