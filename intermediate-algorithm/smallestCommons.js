@@ -55,11 +55,19 @@ function smallestCommons(arr) {
 
 
 function smallestCommons2(arr) {
+
+
+    //smallest common multiple =6
+//3,6,9,12,15,18,...
+//1,2,3,4,5,6,7...
+
     // Setup
     const [min, max] = arr.sort((a, b) => a - b);
+    //[1,3]
+    //[1,2,3]
     const numberDivisors = max - min + 1;
-
-    console.log(min,max)
+    //numbD = 3-1 +1=3
+    //console.log(min,max)
 
     // Largest possible value for SCM
     let upperBound = 1;
@@ -68,76 +76,53 @@ function smallestCommons2(arr) {
       //1*=1=1 i=1 upp=1
       //1*=2=2 i=2 upp=2
       //2*=3=6 i=3 upp=6
-      //6*=4=24 i=4 upp=24
-      //24*=5=120 i=5 upp=120
+
       //console.log(upperBound)
     }
 
     // Test all multiples of 'max'
     for (let multiple = max; multiple <= upperBound; multiple += max) {
-        //multiple = 5, 5 <= 120, 5+=5 = 10
-        //multiple = 10, 10 <= 120, 10+=5 = 15
-        //multiple = 15, 15 <= 120, 15+=5 = 20
-        //multiple = 20, 20 <= 120, 20+=5 = 25
-        //multiple = 25, 25 <= 120, 25+=5 = 30
-        //multiple = 30, 30 <= 120, 30+=5 = 35
-        //multiple = 35, 35 <= 120, 35+=5 = 40
-        //multiple = 40, 40 <= 120, 40+=5 = 45
-        //multiple = 45, 45 <= 120, 45+=5 = 50
-        //multiple = 50, 50 <= 120, 50+=5 = 55
-        //multiple = 55, 55 <= 120, 55+=5 = 60
-        //multiple = 60, 60 <= 120, 60+=5 = 65
+        //multiple = 3, 3 <= 6, 3+=3 = 6
+        //multiple = 6, 6 <= 6, 6+=6 = 12
+
         console.log(multiple)
       // Check if every value in range divides 'multiple'
       let divisorCount = 0;//2
       for (let i = min; i <= max; i++) {
-                  //1         5
+                  //1         3
 
-          //1, 1<=5,1
-          //1, 1<=5,2
-          //1, 1<=5,3
-          //1, 1<=5,4
-          //1, 1<=5,5
+          //1, 1<=3,1
+          //2, 2<=3,3
+          //3, 3<=3,4
+
         // Count divisors
         if (multiple % i === 0) {
             //it takes multiple to check with module
-            //10%1===0
-            //10%2===0//nada
-            //10%3===2
-            //10%4===1
-            //10%5===0
+            //3%1===0
+            //3%2===1//nada
+            //3%3===0
 
-             //15%1===0
-            //15%2===0//nada
-            //15%3===2
-            //15%4===3
-            //15%5===0
 
-            //and so on with multiple
-            //every value in range divides 'multiple'
-             //60%1===0
-            //60%2===0
-            //60%3===0
-            //60%4===0
-            //60%5===0  
+             //6%1===0
+            //6%2===0
+            //6%3===0
+
+
           divisorCount += 1;
           //div 0+=1=1
           //div 1+=1=2
           //div 2+=1=3
-          //div 3+=1=4
-          //div 4+=1=5
+
         }
       }
       if (divisorCount === numberDivisors) {
-          //1===5
-          //1===5
-          //2===5
-          //3===5
-          //4===5
-          //5===5
-        return multiple;//60
+          //1===3
+          //2===3
+          //3===3
+
+        return multiple;//6
       }
     }
   }
   
-  console.log(smallestCommons2([1,5]))
+  console.log(smallestCommons2([1,3]))
