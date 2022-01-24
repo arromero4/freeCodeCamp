@@ -112,13 +112,14 @@ function smallestCommons2(arr) {
             //15%3===2
             //15%4===3
             //15%5===0
-            //and so on with multiple
 
+            //and so on with multiple
+            //every value in range divides 'multiple'
              //60%1===0
-            //60%2===0//nada
-            //60%3===2
-            //60%4===3
-            //60%5===0
+            //60%2===0
+            //60%3===0
+            //60%4===0
+            //60%5===0  
           divisorCount += 1;
           //div 0+=1=1
           //div 1+=1=2
