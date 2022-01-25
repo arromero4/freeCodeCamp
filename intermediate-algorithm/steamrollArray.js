@@ -30,14 +30,17 @@ steamrollArray([1, [2], [3, [[4]]]])
 
 function steamrollArray2(arr) {
     let arrlen = arr.length
+    console.log(arrlen)
     let result = arr.flat(arrlen);
     return result;
   }
   
-// console.log(steamrollArray2([1, [2], [3, [[4]]]]))
-// console.log(steamrollArray2([[["a"]], [["b"]]]))
-// console.log(steamrollArray2([1, [], [3, [[4]]]]))
-// console.log(steamrollArray2([1, {}, [3, [[4]]]]))
+
+
+  console.log(steamrollArray2([1, [2], [3, [[4]]]]))
+console.log(steamrollArray2([[["a"]], [["b"]]]))
+console.log(steamrollArray2([1, [], [3, [[4]]]]))
+console.log(steamrollArray2([1, {}, [3, [[4]]]]))
 
 
 //Option 3
@@ -103,7 +106,7 @@ steamrollArray4([1, [2], [3, [[4]]]])
 //MDN Example
 function flatten(arr) {
     const result = []
-    console.log(arr)
+    //console.log(arr)
     arr.forEach(function(i) {
         //[1(0),
         // 2(1), 
@@ -122,7 +125,7 @@ function flatten(arr) {
       } else {
 
         result.push(i)
-        console.log(result)
+        //console.log(result)
         //result[1]
         //result[1,2]
         //result[1,2,3]<- 
@@ -141,3 +144,14 @@ function flatten(arr) {
   const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
   
   flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+const arrflat1= [0, 1, 2, [3, 4]];
+
+//console.log(arrflat1.flat());
+// expected output: [0, 1, 2, 3, 4]
+
+const arrflat2 = [0, 1, 2, [[[3, 4]]]];
+
+//console.log(arrflat2.flat(2));
+// expected output: [0, 1, 2, [3, 4]]
