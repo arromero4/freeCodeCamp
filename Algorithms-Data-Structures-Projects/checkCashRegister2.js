@@ -44,10 +44,23 @@ See below for an example of a cash-in-drawer array:
 ]
 */
 
+//easy to work with whole numbers
+//0.01 *100 = 1 Penny
+const currencyUnit = {
+  "PENNY": 1,
+  "NICKEL": 5,
+  "DIME": 10,
+  "QUARTER": 25,
+  "ONE": 100,
+  "FIVE": 500,
+  "TEN": 1000,
+  "TWENTY": 2000,
+  "ONE HUNDRED": 10000
+}
 function checkCashRegister(price, cash, cid) {
 
   let changeSum = cash * 100 - price * 100;
-  let changeSumCheck = changeSum;
+  let changeSumCheck = changeSum;//saving a copy
   let change = [];
   let status = '';
 
