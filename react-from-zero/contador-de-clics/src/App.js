@@ -36,6 +36,7 @@ function App() {
           esBotonDeClic={true}
           manejarClic={manejarClic}
         />
+        
         <Boton
           texto='Reiniciar'
           esBotonDeClic={false}
